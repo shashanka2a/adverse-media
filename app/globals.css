@@ -13,6 +13,8 @@ body {
   color: #E0E0E0;
   overflow: hidden; /* Lenis handles scroll */
   cursor: none; /* Custom cursor */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  touch-action: pan-y; /* Enable vertical scrolling on mobile */
 }
 
 /* Custom Cursor */
@@ -95,7 +97,7 @@ body {
 
 .sprocket-top { 
   top: 0;
-  margin-top: 80px; /* Padding from header */
+  margin-top: 60px; /* Padding from header on mobile */
 }
 
 @media (min-width: 768px) {
@@ -106,14 +108,14 @@ body {
 
 .sprocket-bottom { 
   bottom: 0;
-  margin-bottom: 80px; /* Padding from footer */
+  margin-bottom: 80px; /* Padding from footer on mobile */
   border-top: 1px solid #222; 
   border-bottom: none; 
 }
 
 @media (min-width: 768px) {
   .sprocket-bottom {
-    margin-bottom: 100px; /* More padding on desktop */
+    margin-bottom: 120px; /* More padding on desktop */
   }
 }
 
@@ -160,5 +162,19 @@ body {
 /* Utility for Parallax Images */
 .parallax-img {
   will-change: transform;
+}
+
+/* Mobile touch optimizations */
+@media (max-width: 767px) {
+  .interactable,
+  button,
+  a {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
+  
+  .wrapper {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
 }
 
