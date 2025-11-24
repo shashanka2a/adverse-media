@@ -290,8 +290,8 @@ export default function Home() {
                   The team is huddled around a monitor. The glow of the screen illuminates their
                   faces.
                 </p>
-                <p className="mb-4 text-gray-500">// We utilize Arri Alexa cinema cameras.</p>
-                <p className="mb-4 text-gray-500">// We grade in DaVinci Resolve Studio.</p>
+                <p className="mb-4 text-gray-500">{'// We utilize Arri Alexa cinema cameras.'}</p>
+                <p className="mb-4 text-gray-500">{'// We grade in DaVinci Resolve Studio.'}</p>
                 <p className="text-red-carpet font-bold mt-4 tracking-widest">CUT TO BLACK.</p>
               </div>
             </div>
