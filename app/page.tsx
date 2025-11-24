@@ -138,8 +138,8 @@ export default function Home() {
             {/* Gradient Overlay for Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90"></div>
 
-            <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-4 md:px-24">
-              <div className="relative z-10 transform md:translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            <div className="absolute inset-0 flex flex-col justify-center content-safe-area px-4 md:px-24">
+              <div className="relative z-10 transform md:translate-y-0 transition-transform duration-500">
                 {/* Giant Background Text */}
                 <h3 className="hidden md:block text-[12rem] font-oswald text-white opacity-[0.03] absolute -top-40 -left-10 leading-none select-none pointer-events-none">
                   NOIR
@@ -193,8 +193,8 @@ export default function Home() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90"></div>
 
-            <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-4 md:px-24">
-              <div className="relative z-10 transform md:translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+            <div className="absolute inset-0 flex flex-col justify-center content-safe-area px-4 md:px-24">
+              <div className="relative z-10 transform md:translate-y-0 transition-transform duration-500">
                 <h3 className="hidden md:block text-[12rem] font-oswald text-white opacity-[0.03] absolute -top-40 right-0 leading-none select-none pointer-events-none text-right">
                   DRIFT
                 </h3>

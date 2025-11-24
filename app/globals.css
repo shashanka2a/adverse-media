@@ -182,6 +182,19 @@ body {
   }
 }
 
+/* Safe area for absolute positioned content containers */
+.content-safe-area {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+
+@media (min-width: 768px) {
+  .content-safe-area {
+    padding-top: 145px;
+    padding-bottom: 165px;
+  }
+}
+
 /* Mobile touch optimizations */
 @media (max-width: 767px) {
   .interactable,
