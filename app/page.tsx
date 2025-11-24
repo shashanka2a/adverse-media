@@ -56,9 +56,6 @@ export default function Home() {
               </div>
 
               <div className="absolute bottom-[12%] md:bottom-[15%] text-center px-4">
-                <p className="font-mono text-[9px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] text-red-carpet mb-3 md:mb-4 animate-pulse">
-                  Production Mode: Active
-                </p>
                 <h2 className="text-2xl md:text-6xl font-display italic text-white/90 leading-tight md:leading-normal">
                   Cinematic B2B Marketing
                 </h2>
