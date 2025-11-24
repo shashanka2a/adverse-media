@@ -8,6 +8,11 @@
   --cursor-size: 20px;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   background-color: #050505;
   color: #E0E0E0;
@@ -15,6 +20,10 @@ body {
   cursor: none; /* Custom cursor */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   touch-action: pan-y; /* Enable vertical scrolling on mobile */
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  overscroll-behavior: none; /* Prevent pull-to-refresh on mobile */
 }
 
 /* Custom Cursor */
@@ -206,6 +215,13 @@ body {
   
   .wrapper {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    touch-action: pan-y; /* Enable vertical touch scrolling */
+  }
+  
+  /* Ensure Lenis can scroll on mobile */
+  body {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

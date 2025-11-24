@@ -32,7 +32,7 @@ export default function Home() {
       </div>
 
       {/* MAIN SCROLL WRAPPER */}
-      <div className="wrapper relative w-full h-screen overflow-hidden">
+      <div className="wrapper relative w-full h-screen overflow-hidden" style={{ touchAction: 'pan-y' } as React.CSSProperties}>
         {/* THE FILM STRIP (Horizontal Track) */}
         <div id="film-strip" className="flex h-full w-[600vw] relative will-change-transform">
           <Sprockets />

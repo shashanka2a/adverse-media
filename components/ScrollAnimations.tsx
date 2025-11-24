@@ -15,13 +15,24 @@ export function ScrollAnimations() {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      touchMultiplier: 1.5,
+      touchMultiplier: 2,
+      wheelMultiplier: 1,
+      smoothWheel: true,
+      smoothTouch: false, // Disable smooth touch for better mobile performance
     } as any)
 
     lenisRef.current = lenis
 
     // Sync Lenis
     lenis.on('scroll', ScrollTrigger.update)
+    
+    // Use requestAnimationFrame for better mobile performance
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+    
     gsap.ticker.add((time) => lenis.raf(time * 1000))
     gsap.ticker.lagSmoothing(0)
 
