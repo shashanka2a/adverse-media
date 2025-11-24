@@ -39,7 +39,7 @@ export default function Home() {
 
           {/* FRAME 1: HERO / COUNTDOWN */}
           <div
-            className="panel w-screen h-full relative flex-shrink-0 border-r border-white/5 flex items-center justify-center bg-film-black group"
+            className="panel panel-content-safe w-screen h-full relative flex-shrink-0 border-r border-white/5 flex items-center justify-center bg-film-black group"
             data-cursor-text="START"
           >
             <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           {/* FRAME 2: MANIFESTO */}
-          <div className="panel w-screen h-full relative flex-shrink-0 border-r border-white/5 flex items-center bg-[#080808]">
+          <div className="panel panel-content-safe w-screen h-full relative flex-shrink-0 border-r border-white/5 flex items-center bg-[#080808]">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 via-black to-black"></div>
 
@@ -228,7 +228,7 @@ export default function Home() {
           </div>
 
           {/* FRAME 5: SERVICES (The Script) */}
-          <div className="panel w-screen h-full relative flex-shrink-0 border-r border-white/5 bg-silver-screen text-film-black flex items-center">
+          <div className="panel panel-content-safe w-screen h-full relative flex-shrink-0 border-r border-white/5 bg-silver-screen text-film-black flex items-center">
             <div className="container mx-auto px-4 md:px-32 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div>
                 <span className="font-mono text-red-carpet text-[10px] md:text-xs tracking-widest uppercase mb-3 md:mb-4 block">
@@ -297,7 +297,7 @@ export default function Home() {
           </div>
 
           {/* FRAME 6: CONTACT (End Credits) */}
-          <div className="panel w-screen h-full relative flex-shrink-0 bg-film-black flex flex-col items-center justify-center text-center">
+          <div className="panel panel-content-safe w-screen h-full relative flex-shrink-0 bg-film-black flex flex-col items-center justify-center text-center">
             {/* Rolling credits effect background */}
             <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
               <div className="animate-[scrollY_20s_linear_infinite] w-full text-center font-oswald text-4xl text-white space-y-24 pt-[100vh]">
@@ -308,7 +308,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="max-w-4xl px-4 md:px-8 relative z-10">
+            <div className="max-w-4xl px-4 md:px-8 relative z-10 my-auto">
               <h2 className="text-4xl md:text-9xl font-display text-white mb-4 md:mb-8 tracking-tight">
                 The End?
               </h2>
@@ -341,10 +341,10 @@ export default function Home() {
                   hello@adverse.media
                 </div>
               </div>
-            </div>
-
-            <div className="absolute bottom-12 md:bottom-20 font-mono text-[9px] md:text-[10px] text-gray-700">
-              © 2025 ADVERSE MEDIA. FILM STRIP CONCEPT V2.
+              
+              <div className="mt-8 md:mt-12 font-mono text-[9px] md:text-[10px] text-gray-700">
+                © 2025 ADVERSE MEDIA. FILM STRIP CONCEPT V2.
+              </div>
             </div>
           </div>
         </div>

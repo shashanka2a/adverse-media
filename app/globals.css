@@ -164,6 +164,24 @@ body {
   will-change: transform;
 }
 
+/* Center content between sprocket strips */
+.panel {
+  box-sizing: border-box;
+}
+
+/* Utility class for panels that need spacing from sprockets */
+.panel-content-safe {
+  padding-top: 90px; /* Top sprocket margin (60px) + height (30px) on mobile */
+  padding-bottom: 110px; /* Bottom sprocket margin (80px) + height (30px) on mobile */
+}
+
+@media (min-width: 768px) {
+  .panel-content-safe {
+    padding-top: 145px; /* Top sprocket margin (100px) + height (45px) on desktop */
+    padding-bottom: 165px; /* Bottom sprocket margin (120px) + height (45px) on desktop */
+  }
+}
+
 /* Mobile touch optimizations */
 @media (max-width: 767px) {
   .interactable,
