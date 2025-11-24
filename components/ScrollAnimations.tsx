@@ -11,28 +11,33 @@ export function ScrollAnimations() {
   const lenisRef = useRef<Lenis | null>(null)
 
   useEffect(() => {
+    // Detect if device supports touch
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+    
     // Setup Lenis (Smooth Scroll)
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      touchMultiplier: 2,
-      wheelMultiplier: 1,
-      smoothWheel: true,
-      smoothTouch: false, // Disable smooth touch for better mobile performance
+      touchMultiplier: isTouchDevice ? 2 : 1.5, // Higher multiplier for touch devices
+      wheelMultiplier: 1, // Standard for mouse wheel
+      smoothWheel: true, // Smooth scrolling for mouse wheel on desktop
+      smoothTouch: isTouchDevice ? true : false, // Enable smooth touch on mobile
+      infinite: false,
     } as any)
 
     lenisRef.current = lenis
 
-    // Sync Lenis
+    // Sync Lenis with ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update)
     
-    // Use requestAnimationFrame for better mobile performance
+    // Use requestAnimationFrame for smooth updates
     function raf(time: number) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
     
+    // Also sync with GSAP ticker for compatibility
     gsap.ticker.add((time) => lenis.raf(time * 1000))
     gsap.ticker.lagSmoothing(0)
 

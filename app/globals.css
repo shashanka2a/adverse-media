@@ -26,6 +26,22 @@ body {
   overscroll-behavior: none; /* Prevent pull-to-refresh on mobile */
 }
 
+/* Enable smooth scrolling for both desktop and mobile */
+@media (hover: hover) {
+  /* Desktop/laptop with mouse */
+  body {
+    touch-action: auto;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Mobile/touch devices */
+  body {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Custom Cursor */
 #cursor {
   position: fixed;
@@ -217,11 +233,12 @@ body {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     touch-action: pan-y; /* Enable vertical touch scrolling */
   }
-  
-  /* Ensure Lenis can scroll on mobile */
-  body {
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
+}
+
+/* Desktop mouse wheel scrolling */
+@media (hover: hover) and (pointer: fine) {
+  .wrapper {
+    touch-action: auto;
   }
 }
 
