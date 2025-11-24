@@ -1,0 +1,110 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Lenis from '@studio-freight/lenis'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export function ScrollAnimations() {
+  const lenisRef = useRef<Lenis | null>(null)
+
+  useEffect(() => {
+    // Setup Lenis (Smooth Scroll)
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      touchMultiplier: 1.5,
+    })
+
+    lenisRef.current = lenis
+
+    // Sync Lenis
+    lenis.on('scroll', ScrollTrigger.update)
+    gsap.ticker.add((time) => lenis.raf(time * 1000))
+    gsap.ticker.lagSmoothing(0)
+
+    const sections = gsap.utils.toArray('.panel') as HTMLElement[]
+    const progressBar = document.getElementById('progress-bar')
+    const frameDisplay = document.getElementById('frame-display')
+
+    // Horizontal Scroll Animation
+    const scrollTween = gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.wrapper',
+        pin: true,
+        scrub: 1,
+        end: () => '+' + window.innerWidth * 4,
+        onUpdate: (self) => {
+          // Update Progress Bar
+          if (progressBar) {
+            gsap.to(progressBar, {
+              width: `${self.progress * 100}%`,
+              duration: 0.1,
+              ease: 'none',
+            })
+          }
+
+          // Update Frame Counter
+          if (frameDisplay) {
+            const currentFrame = Math.min(
+              Math.round(self.progress * (sections.length - 1)) + 1,
+              sections.length
+            )
+            frameDisplay.innerText = `00${currentFrame}`
+          }
+        },
+      },
+    })
+
+    // Parallax Effect for Images inside panels
+    sections.forEach((section) => {
+      const img = section.querySelector<HTMLElement>('.parallax-img img')
+      if (img) {
+        gsap.to(img, {
+          x: '10%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            containerAnimation: scrollTween,
+            start: 'left right',
+            end: 'right left',
+            scrub: true,
+          },
+        })
+      }
+
+      // Text Reveal Animation
+      const texts = section.querySelectorAll<HTMLElement>('.reveal-text')
+      if (texts.length > 0) {
+        gsap.to(texts, {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: section,
+            containerAnimation: scrollTween,
+            start: 'left center',
+            toggleActions: 'play none none reverse',
+          },
+        })
+        gsap.set(texts, { y: 30 })
+      }
+    })
+
+    return () => {
+      lenis.destroy()
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
+
+  return null
+}
+
