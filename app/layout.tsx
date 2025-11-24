@@ -25,9 +25,9 @@ const oswald = Oswald({
 })
 
 export const metadata: Metadata = {
-  title: 'AdVerse.media | Cinematic B2B Marketing',
-  description: 'Stop making "content". Start making cinema. We apply French New Wave aesthetics to SaaS, Fintech, and Enterprise storytelling. Raw, honest, and impossible to ignore.',
-  keywords: ['B2B marketing', 'cinematic video production', 'SaaS marketing', 'Fintech marketing', 'enterprise storytelling', 'video production', 'creative agency', 'Los Angeles'],
+  title: 'AdVerse.media | AI-Powered Cinematic Video Production',
+  description: 'Transform your B-roll footage into cinematic marketing videos with AI. We leverage AI to create professional videos with voiceovers, AI avatars, and Hollywood-grade aesthetics.',
+  keywords: ['AI video production', 'B-roll to cinematic', 'AI voiceover', 'AI avatars', 'cinematic video conversion', 'automated video editing', 'AI marketing videos', 'video production AI'],
   authors: [{ name: 'AdVerse Media' }],
   creator: 'AdVerse Media',
   publisher: 'AdVerse Media',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'AdVerse.media | Cinematic B2B Marketing',
-    description: 'Stop making "content". Start making cinema. We apply French New Wave aesthetics to SaaS, Fintech, and Enterprise storytelling.',
+    title: 'AdVerse.media | AI-Powered Cinematic Video Production',
+    description: 'Transform your B-roll footage into cinematic marketing videos with AI. Professional voiceovers, AI avatars, and Hollywood-grade aesthetics.',
     url: 'https://adverse.media',
     siteName: 'AdVerse Media',
     locale: 'en_US',
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AdVerse.media | Cinematic B2B Marketing',
-    description: 'Stop making "content". Start making cinema. We apply French New Wave aesthetics to SaaS, Fintech, and Enterprise storytelling.',
+    title: 'AdVerse.media | AI-Powered Cinematic Video Production',
+    description: 'Transform your B-roll footage into cinematic marketing videos with AI. Professional voiceovers, AI avatars, and Hollywood-grade aesthetics.',
     images: ['/og-image.jpg'],
   },
   robots: {

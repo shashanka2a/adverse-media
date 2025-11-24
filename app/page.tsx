@@ -19,8 +19,8 @@ export default function Home() {
 
       {/* Logo (Fixed UI) */}
       <div className="fixed top-6 left-6 md:top-8 md:left-8 z-50 mix-blend-difference cursor-none pointer-events-none">
-        <h1 className="font-oswald font-bold text-xl md:text-2xl tracking-tighter text-white">
-          ADVERSE<span className="text-red-carpet">.MEDIA</span>
+        <h1 className="font-display font-normal text-lg md:text-xl tracking-wide text-white">
+          ADVERSE
         </h1>
       </div>
 
@@ -108,9 +108,9 @@ export default function Home() {
                 </h2>
 
                 <p className="font-mono text-sm md:text-xl text-gray-400 max-w-2xl leading-relaxed opacity-0 reveal-text">
-                  Your B2B product isn&apos;t boring. Your presentation is. We apply French New Wave
-                  aesthetics to SaaS, Fintech, and Enterprise storytelling. Raw, honest, and
-                  impossible to ignore.
+                  Send us your B-roll footage. We leverage AI to transform it into cinematic marketing
+                  videos with professional voiceovers, AI avatars, and Hollywood-grade aesthetics. Your
+                  raw footage becomes impossible to ignore.
                 </p>
               </div>
             </div>
@@ -159,8 +159,9 @@ export default function Home() {
 
                 <div className="mt-4 md:mt-8 max-w-xl">
                   <p className="burned-subtitle font-mono text-sm md:text-lg text-celluloid-cream italic inline-block leading-relaxed">
-                    &quot;We needed security to feel sexy. AdVerse delivered a heist movie for our
-                    crypto wallet launch.&quot;
+                    &quot;We sent raw B-roll of our office. AdVerse&apos;s AI transformed it into a
+                    cinematic thriller with AI voiceover and avatars. Our crypto wallet launch never
+                    looked so good.&quot;
                   </p>
                 </div>
 
@@ -212,8 +213,8 @@ export default function Home() {
 
                 <div className="mt-4 md:mt-8 max-w-xl">
                   <p className="burned-subtitle font-mono text-sm md:text-lg text-celluloid-cream italic inline-block leading-relaxed">
-                    &quot;Visualizing 5 Petabytes of data transfer without a single dashboard
-                    screenshot. Pure kinetic energy.&quot;
+                    &quot;Our team&apos;s B-roll footage became a cinematic masterpiece. AI-powered
+                    voiceovers and avatars brought our data platform to life. No studio needed.&quot;
                   </p>
                 </div>
 
@@ -249,7 +250,7 @@ export default function Home() {
                   >
                     <span className="text-xs md:text-sm font-mono text-red-carpet">01</span>
                     <span className="border-b-2 border-black/10 group-hover:border-red-carpet transition-all duration-300 transform group-hover:translate-x-2">
-                      Script & Storyboard
+                      Upload Your B-Roll
                     </span>
                   </li>
                   <li
@@ -258,7 +259,7 @@ export default function Home() {
                   >
                     <span className="text-xs md:text-sm font-mono text-red-carpet">02</span>
                     <span className="border-b-2 border-black/10 group-hover:border-red-carpet transition-all duration-300 transform group-hover:translate-x-2">
-                      Principal Photography
+                      AI Cinematic Conversion
                     </span>
                   </li>
                   <li
@@ -267,7 +268,7 @@ export default function Home() {
                   >
                     <span className="text-xs md:text-sm font-mono text-red-carpet">03</span>
                     <span className="border-b-2 border-black/10 group-hover:border-red-carpet transition-all duration-300 transform group-hover:translate-x-2">
-                      Cinema Grade / Sfx
+                      AI Voiceover & Avatars
                     </span>
                   </li>
                   <li
@@ -276,7 +277,7 @@ export default function Home() {
                   >
                     <span className="text-xs md:text-sm font-mono text-red-carpet">04</span>
                     <span className="border-b-2 border-black/10 group-hover:border-red-carpet transition-all duration-300 transform group-hover:translate-x-2">
-                      Global Distribution
+                      Delivery & Distribution
                     </span>
                   </li>
                 </ul>
@@ -287,11 +288,12 @@ export default function Home() {
                 <p className="mb-4 font-bold text-gray-400">SCRIPT_FINAL_V3.PDF</p>
                 <p className="mb-4 tracking-wide">INT. CREATIVE AGENCY - NIGHT</p>
                 <p className="mb-4 max-w-sm">
-                  The team is huddled around a monitor. The glow of the screen illuminates their
-                  faces.
+                  AI processes your B-roll footage. The algorithm transforms raw clips into cinematic
+                  sequences.
                 </p>
-                <p className="mb-4 text-gray-500">{'// We utilize Arri Alexa cinema cameras.'}</p>
-                <p className="mb-4 text-gray-500">{'// We grade in DaVinci Resolve Studio.'}</p>
+                <p className="mb-4 text-gray-500">{'// AI-powered video conversion engine.'}</p>
+                <p className="mb-4 text-gray-500">{'// Professional AI voiceovers & avatars.'}</p>
+                <p className="mb-4 text-gray-500">{'// Cinema-grade color grading & effects.'}</p>
                 <p className="text-red-carpet font-bold mt-4 tracking-widest">CUT TO BLACK.</p>
               </div>
             </div>
